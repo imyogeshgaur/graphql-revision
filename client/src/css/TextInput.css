@@ -1,0 +1,13 @@
+.form-label{
+    color: black;
+    font-size: larger;
+}
+
+.form-input{
+    padding: 0.6rem;
+    width: 24rem;
+    margin-bottom: 1rem;
+    outline: none;
+    border: 1px solid white;
+    border-radius: 0.3rem;
+}

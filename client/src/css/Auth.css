@@ -1,0 +1,19 @@
+.form-data{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(160, 141, 228);
+    margin: 20vh 30vw;
+    padding: 1rem 3rem;
+    border-radius: 0.5rem;
+}
+
+.row{
+    display: flex;
+    flex-direction: column;
+}
+
+.form-heading{
+    display: flex;
+    justify-content: center;
+}
