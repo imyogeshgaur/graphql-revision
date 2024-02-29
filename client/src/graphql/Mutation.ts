@@ -22,7 +22,7 @@ export const LOGIN_WITH_EMAIL_MUTATION = gql`
     }
 `
 
-export const LOGIN_WITH_PASSWORD_MUTATION = gql`
+export const LOGIN_WITH_PHONE_MUTATION = gql`
     mutation loginUserWithPhone($userInput: phoneLoginInput){
         loginUserWithPhone(userInput: $userInput) {
         data,

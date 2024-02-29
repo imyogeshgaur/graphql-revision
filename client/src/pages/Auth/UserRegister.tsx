@@ -12,6 +12,7 @@ import {
 import { useDispatch } from "react-redux";
 import { addUserData } from "../../redux/userSlice";
 import { useNavigate } from "react-router";
+import CustomLink from "../../components/CustomLink";
 
 const UserRegister = () => {
   const [userData, setUserData] = useState<UserInterface>({
@@ -95,6 +96,7 @@ const UserRegister = () => {
     <>
       <div className="form-data">
         <div className="row">
+        <h1 className="form-heading">User Details</h1>
           {propsArray.map((val: TextInputInterface, index: any) => (
             <TextInput
               key={index}
@@ -106,6 +108,13 @@ const UserRegister = () => {
             />
           ))}
           <Button btnText="Submit" onSubmit={userRegisterFunction} />
+          <CustomLink
+            linkName={"Login Here"}
+            navigateTo={"/"}
+            linkStyle={{ color: "white", textDecoration: "none",marginTop:"1rem" }}
+            linkTextStyle={{ textAlign: "center", marginRight: 20,marginTop:"1rem" }}
+            linkText={"Already Registered? "}
+          />
         </div>
       </div>
     </>

@@ -93,14 +93,20 @@ const AddressRegister = () => {
         navigate("/")
       }else{
         navigate("/registerUser")
+        console.log(responseFromBackend.data.signUpUser.message)
       }
     }
   };
+
+  const goOnePageBack = ()=>{
+    history.back();
+  }
 
   return (
     <>
       <div className="form-data">
         <div className="row">
+        <h1 className="form-heading">Address Details</h1>
           {propsArray.map((val: TextInputInterface, index: any) => (
             <TextInput
               key={index}
@@ -112,6 +118,7 @@ const AddressRegister = () => {
             />
           ))}
           <Button btnText="Submit" onSubmit={addressRegisterFunction} />
+          <Button btnText="Back" onSubmit={goOnePageBack} btnClass={"back-button"}/>
         </div>
       </div>
     </>

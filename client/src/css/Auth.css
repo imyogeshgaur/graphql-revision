@@ -17,3 +17,15 @@
     display: flex;
     justify-content: center;
 }
+
+.back-button{
+    background-color: rgb(175, 18, 18);
+    color:white;
+    padding: 0.5rem;
+    border: 1px solid rgb(175, 18, 18);
+    outline: none;
+    border-radius: 0.4rem;
+    width: 50%;
+    margin-left: 6rem;
+    margin-top: 1rem;
+}
