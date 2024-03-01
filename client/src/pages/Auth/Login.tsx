@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "../../css/Auth.css";
 import { LoginInterface } from "../../interface/LoginInterface";
 import TextInput from "../../components/TextInput";
@@ -17,6 +17,12 @@ import {
 import { useNavigate } from "react-router";
 
 const Login = () => {
+  
+  useEffect(() => {
+    const token = localStorage.getItem("token");
+    if (token !== undefined || null || "") navigate("/home");
+  }, []);
+
   const [user, setUser] = useState<LoginInterface>({
     emailOrPhone: "",
     password: "",
@@ -117,8 +123,16 @@ const Login = () => {
           <CustomLink
             linkName={"SignUp Here"}
             navigateTo={"/registerUser"}
-            linkStyle={{ color: "white", textDecoration: "none",marginTop:"1rem" }}
-            linkTextStyle={{ textAlign: "center", marginRight: 20,marginTop:"1rem" }}
+            linkStyle={{
+              color: "white",
+              textDecoration: "none",
+              marginTop: "1rem",
+            }}
+            linkTextStyle={{
+              textAlign: "center",
+              marginRight: 20,
+              marginTop: "1rem",
+            }}
             linkText={"New Here? "}
           />
         </div>

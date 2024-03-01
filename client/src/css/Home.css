@@ -2,3 +2,23 @@
     display: grid;
     grid-template-columns: 30% 30% 30%;
 }
+
+.search-input{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    margin-left: 30rem;
+    width:24vw;
+    padding: 0.7rem;
+    border: 3px solid rgb(49, 0, 128);
+    border-radius: 0.4rem;
+    outline: none;
+}
+
+.sort-input{
+    width:12vw;
+    padding: 0.7rem;
+    border: 3px solid rgb(49, 0, 128);
+    border-radius: 0.4rem;
+    outline: none;
+    margin-left: 27rem;
+}
